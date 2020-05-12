@@ -1,8 +1,6 @@
-package com.epam;
+package org.sdoroshenko;
 
-/**
- * @author Evgeny Borisov
- */
+
 public class AngryPoliceman implements Policeman {
     @Override
     public void makePeopleLeaveRoom() {

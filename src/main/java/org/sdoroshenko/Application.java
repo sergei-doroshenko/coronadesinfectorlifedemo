@@ -1,10 +1,8 @@
-package com.epam;
+package org.sdoroshenko;
 
 import java.util.Map;
 
-/**
- * @author Evgeny Borisov
- */
+
 public class Application {
     public static ApplicationContext run(String packageToScan, Map<Class, Class> ifc2ImplClass) {
         JavaConfig config = new JavaConfig(packageToScan, ifc2ImplClass);

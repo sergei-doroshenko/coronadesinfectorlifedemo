@@ -1,4 +1,4 @@
-package com.epam;
+package org.sdoroshenko;
 
 import net.sf.cglib.proxy.Enhancer;
 
@@ -7,10 +7,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-/**
- * @author Evgeny Borisov
- */
+
 public class DeprecatedHandlerProxyConfigurator implements ProxyConfigurator {
+
     @Override
     public Object replaceWithProxyIfNeeded(Object t, Class implClass) {
         //todo make support for @Deprecate above methods, not class
@@ -24,7 +23,6 @@ public class DeprecatedHandlerProxyConfigurator implements ProxyConfigurator {
                     }
                 });
             }
-
 
             return Proxy.newProxyInstance(implClass.getClassLoader(), implClass.getInterfaces(), new InvocationHandler() {
                 @Override

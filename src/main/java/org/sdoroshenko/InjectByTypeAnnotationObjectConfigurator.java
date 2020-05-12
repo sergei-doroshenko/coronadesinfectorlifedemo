@@ -1,16 +1,11 @@
-package com.epam;
-
-import lombok.SneakyThrows;
+package org.sdoroshenko;
 
 import java.lang.reflect.Field;
 
-/**
- * @author Evgeny Borisov
- */
 public class InjectByTypeAnnotationObjectConfigurator implements ObjectConfigurator {
+
     @Override
-    @SneakyThrows
-    public void configure(Object t, ApplicationContext context) {
+    public void configure(Object t, ApplicationContext context) throws IllegalAccessException {
         for (Field field : t.getClass().getDeclaredFields()) {
             if (field.isAnnotationPresent(InjectByType.class)) {
                 field.setAccessible(true);

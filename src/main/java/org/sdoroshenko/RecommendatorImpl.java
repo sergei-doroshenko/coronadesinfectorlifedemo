@@ -1,8 +1,6 @@
-package com.epam;
+package org.sdoroshenko;
 
-/**
- * @author Evgeny Borisov
- */
+
 @Singleton
 public class RecommendatorImpl implements Recommendator {
     @InjectProperty("wisky")

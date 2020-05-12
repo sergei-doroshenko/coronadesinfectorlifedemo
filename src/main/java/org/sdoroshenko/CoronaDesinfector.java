@@ -1,8 +1,6 @@
-package com.epam;
+package org.sdoroshenko;
 
-/**
- * @author Evgeny Borisov
- */
+
 
 public class CoronaDesinfector {
 
@@ -10,7 +8,6 @@ public class CoronaDesinfector {
     private Announcer announcer;
     @InjectByType
     private Policeman policeman;
-
 
     public void start(Room room) {
         announcer.announce("Начинаем дезинфекцию, всё вон!");

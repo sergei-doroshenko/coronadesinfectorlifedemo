@@ -1,11 +1,10 @@
-package com.epam;
+package org.sdoroshenko;
 
-/**
- * @author Evgeny Borisov
- */
+
 public class ConsoleAnnouncer implements Announcer {
     @InjectByType
     private Recommendator recommendator;
+
     @Override
     public void announce(String message) {
         System.out.println(message);

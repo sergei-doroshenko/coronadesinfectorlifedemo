@@ -1,8 +1,6 @@
-package com.epam;
+package org.sdoroshenko;
 
-/**
- * @author Evgeny Borisov
- */
+
 public interface Policeman {
     void makePeopleLeaveRoom();
 }

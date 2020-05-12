@@ -1,17 +1,12 @@
-package com.epam;
-
-import lombok.Getter;
-import org.reflections.Reflections;
+package org.sdoroshenko;
 
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @author Evgeny Borisov
- */
+import org.reflections.Reflections;
+
 public class JavaConfig implements Config {
 
-    @Getter
     private Reflections scanner;
     private Map<Class, Class> ifc2ImplClass;
 
@@ -31,6 +26,11 @@ public class JavaConfig implements Config {
             return classes.iterator().next();
         });
 
+    }
+
+    @Override
+    public Reflections getScanner() {
+        return this.scanner;
     }
 }
 

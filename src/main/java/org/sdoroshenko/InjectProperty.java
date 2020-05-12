@@ -1,6 +1,4 @@
-package com.epam;/**
- * @author Evgeny Borisov
- */
+package org.sdoroshenko;
 
 import java.lang.annotation.Retention;
 
